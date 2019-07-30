@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gp2.clubstore.mapper.ProductMapper">
+    <select id="queryById" resultType="com.gp2.clubstore.pojo.Product">
+        select * from test.product where id=#{id}
+    </select>
+    <select id="queryByCategory">
+        select * from test.product where category=#{category}
+    </select>
+    <select id="queryByBrand">
+        select * from test.product where brand=#{brand}
+    </select>
+<!--取最新5件-->
+    <select id="queryNew">
+        select * from test.product order by newDate limit 5
+    </select>
+</mapper>

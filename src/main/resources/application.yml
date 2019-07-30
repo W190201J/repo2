@@ -1,0 +1,14 @@
+#database
+spring:
+  datasource:
+    url: jdbc:mysql://172.17.0.2:3306
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: passwdfortest
+    username: test
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/emps
+
+#mybatis
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
