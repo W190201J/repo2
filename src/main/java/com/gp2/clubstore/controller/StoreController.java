@@ -1,5 +1,6 @@
 package com.gp2.clubstore.controller;
 
+import com.gp2.clubstore.pojo.Item;
 import com.gp2.clubstore.pojo.Product;
 import com.gp2.clubstore.service.impl.StoreService;
 import org.springframework.http.HttpStatus;
@@ -14,7 +15,7 @@ public class StoreController {
     @Resource(name = "storeService")
     private StoreService service;
 
-
+    //商品模块
     @GetMapping("/product/id/{id}")
     public ResponseEntity<?> queryById(@PathVariable("id") Integer id) {
         Product product = service.queryById(id);
@@ -24,56 +25,78 @@ public class StoreController {
             return new ResponseEntity<>(product, HttpStatus.OK);
     }
 
-
-    @GetMapping("/product/{category}")
-    public ResponseEntity<?> queryByCategory(@PathVariable("category") String category) {
-        List<Product> products = service.queryByCategory(category);
+    @GetMapping("/product/{column}/{value}")
+    public ResponseEntity<?> queryProduct
+            (@PathVariable("column") String column,
+             @PathVariable("value") String value) {
+        List<Product> products = null;
+        switch (column) {
+            case "category": {
+                products = service.queryByCategory(value);
+                break;
+            }
+            case "brand": {
+                products = service.queryByBrand(value);
+                break;
+            }
+            case "new": {
+                try {
+                    products = service.queryNew(Integer.parseInt(value));
+                } catch (NumberFormatException ignored) {
+                }
+                break;
+            }
+            case "hot": {
+                try {
+                    products = service.queryHot(Integer.parseInt(value));
+                } catch (NumberFormatException ignored) {
+                }
+            }
+        }
         if (products == null || products.isEmpty())
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         else
             return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
-
-    @GetMapping("/product/{brand}")
-    public ResponseEntity<?> queryByBrand(@PathVariable("brand") String brand) {
-        List<Product> products = service.queryByCategory(brand);
-        if (products == null || products.isEmpty())
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        else
-            return new ResponseEntity<>(products, HttpStatus.OK);
-
-    }
-
-
-    @GetMapping("/product/new")
-    public ResponseEntity<?> queryNew() {
-        List<Product> products = service.queryNew();
-        if (products == null || products.isEmpty())
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        else
-            return new ResponseEntity<>(products, HttpStatus.OK);
-    }
-
-
-    @GetMapping("/account/address")
-    public ResponseEntity<?> queryAddress(Integer id) {
+    //账号模块
+    @GetMapping("/account/address/{id}")
+    public ResponseEntity<?> queryAddress(@PathVariable("id") Integer id) {
         String address = service.queryAddress(id);
-        if (address==null||address.length()==0)
+        if (address == null || address.length() == 0)
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         else
             return new ResponseEntity<>(address, HttpStatus.OK);
     }
 
-    /*ToDo 订单插入逻辑*/
+    //订单模块
+    @PostMapping("/order/insertItem")
+    public ResponseEntity<?> insertItem(Item item) {
+        int status = service.insertItem(item);
+        if (status > 0)
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        else
+            return new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE);
+    }
 
-    /*Todo 订单查询逻辑*/
+    @GetMapping("/order/query/{id}")
+    public ResponseEntity<?> queryOrder(@PathVariable("id") Integer id) {
+        List<Item> order = service.queryOrder(id);
+        if (order == null || order.isEmpty())
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        else
+            return new ResponseEntity<>(order, HttpStatus.OK);
+    }
 
-    /*ToDo 热销商品逻辑*/
-
-    /*ToDo 商品尺码的处理*/
-
-    /*Todo 合并id,category,brand的控制器*/
-
-    /*ToDo Mapper.xml指定ResultType*/
+    //成交统计模块
+    @PutMapping("/sold/{id}/{num}")
+    public ResponseEntity<?> changeSoldNum(
+            @PathVariable("num") Integer num,
+            @PathVariable("id") Integer id) {
+        int status = service.changeSoldNum(num,id);
+        if (status > 0)
+            return new ResponseEntity<>(HttpStatus.CREATED);
+        else
+            return new ResponseEntity<>(HttpStatus.SERVICE_UNAVAILABLE);
+    }
 }

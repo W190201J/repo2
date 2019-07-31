@@ -1,17 +1,25 @@
 package com.gp2.clubstore.mapper;
 
 import com.gp2.clubstore.pojo.Product;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository("productMapper")
 public interface ProductMapper {
-    Product queryById(Integer id);
+    @Select("select * from test.product where id=#{id}")
+    @Results(id = "productMap",value = {
+            @Result(column = "option_",property = "option")
+    })
+    Product queryById(@Param("id") Integer id);
 
-    List<Product> queryByCategory(String category);
+    @Select("select * from test.product order by newDate limit #{num}")
+    @ResultMap("productMap")
+    List<Product> queryNew(@Param("num") Integer num);
 
-    List<Product> queryByBrand(String brand);
-
-    List<Product> queryNew();
+    @Select("select * from test.product where ${column}=#{value}")
+    @ResultMap("productMap")
+    List<Product> queryByColumn
+            (@Param("column") String column,@Param("value") String value);
 }

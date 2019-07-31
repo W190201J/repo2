@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gp2.clubstore.mapper.AccountMapper">
-    <select id="queryAddress">
+    <select id="queryAddress" resultType="String">
         select address from test.account where id=#{id}
     </select>
 </mapper>

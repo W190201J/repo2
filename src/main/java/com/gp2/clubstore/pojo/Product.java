@@ -13,7 +13,7 @@ public class Product {
     private String category;
     private String brand;
     private Float price;
-    private String[] option;
+    private String option;
     private String description;
     private String picture;
     @DateTimeFormat(pattern = "yyyy-MM-dd")

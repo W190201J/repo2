@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias type="com.gp2.clubstore.pojo.Item" alias="Item"/>
+        <typeAlias type="com.gp2.clubstore.pojo.Product" alias="Product"/>
+        <typeAlias type="com.gp2.clubstore.pojo.Account" alias="Account"/>
+        <typeAlias type="com.gp2.clubstore.pojo.Sold" alias="Sold"/>
+    </typeAliases>
+</configuration>

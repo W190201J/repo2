@@ -2,9 +2,26 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gp2.clubstore.mapper.SoldMapper">
-    <select id="queryHot">
-        select * from test.product
+    <select id="queryHot" resultType="Product">
+        select *
+        from test.product
         where id in
-              (select productID from test.sold order by soldNum desc limit 5)
+              (select id
+               from (select *
+                     from test.sold
+                     order by soldNum desc
+                     limit #{num}) as t)
+    </select>
+<!--    商品id存在时-->
+    <update id="updateSoldNum">
+        update test.sold set soldNum=soldNum+#{num} where productID=#{id}
+    </update>
+<!--    商品id不存在时-->
+    <insert id="insertSoldNum">
+        insert into test.sold values (#{id},#{num})
+    </insert>
+    <!--用于检测id是否存在-->
+    <select id="querySoldById" resultType="Integer">
+        select productID from test.sold where productID=#{id}
     </select>
 </mapper>
