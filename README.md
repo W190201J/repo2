@@ -1,4 +1,7 @@
+>前端页面不会写啊
+
 # 篮球俱乐部
+
 ## 俱乐部商城
 ### 商城后台
 #### Todo
@@ -8,8 +11,11 @@
 - [x] 商品尺码处理
 - [x] 合并id,category,brand的控制器
 - [x] Mapper.xml指定ResultType
-- [ ] 订单信息增加mongodb接口
-- [ ] redis缓存最新与最热产品
+- [x] 切换到dev分支进行开发
+- [x] 收集商品信息
+- [ ] ~~订单信息增加mongodb接口~~
+- [ ] ~~redis缓存最新与最热产品~~
+- [ ] 根据前端需求优化后台逻辑
 #### 测试用表
 
 ##### 商品表
@@ -29,8 +35,7 @@ create table product
     newDate     date         null
 );
 
-INSERT INTO test.product (id, name, category, price, option_, description, picture, brand, newDate) VALUES (1, '篮球', '球类', 300, 'x', '没有描述', '图片', 'Nike', '2019-07-17');
-INSERT INTO test.product (id, name, category, price, option_, description, picture, brand, newDate) VALUES (2, '秋衣', '衣服', 400, 'y', 'meiyou', 'mt', 'ln', '2019-07-11');
+/*数据正在更新中*/
 ```
 
 ##### 账号表
@@ -94,33 +99,35 @@ INSERT INTO test.sold (productID, soldNum) VALUES (2, 4);
 
 ##### 商品模块
 
-* 根据id查询商品`/product/id/{id}`
+* 根据id查询商品`/api/product/id/{id}`
 * 根据品牌，分类查询商品，查询最新，最热商品`/product/{column}/{value}`
 
 eg:
 
-分类：`/product/category/basketball`
+分类：`/api/product/category/basketball`
 
-品牌:`/product/brand/Nike`
+品牌:`/api/product/brand/Nike`
 
-最热五件:`/product/hot/5`
+最热五件:`/api/product/hot/5`
 
-最新五件:`/product/new/5`
+最新五件:`/api/product/new/5`
 
 ##### 账号模块
 
-* 根据id获得地址`/account/address/{id}`
+* 根据id获得地址`/api/account/address/{id}`
 
 ##### 订单模块
 
-* 插入项目`/order/insertItem`
-* 根据id查询订单`/order/query/{id}`
+* 插入项目`/api/order/insertItem`
+* 根据id查询订单`/api/order/query/{id}`
 
 ##### 成交统计模块
 
-* 商品成交后加入统计`/sold/{id}/{num}`
+* 商品成交后加入统计`/api/sold/{id}/{num}`
 
 ### 商城界面
 #### ToDo
-- [ ] 下载界面代码
-- [ ] 静态资源部署至nginx
+- [x] 下载界面代码
+- [x] 静态资源部署至nginx
+- [ ] 替换页面元素
+- [ ] 各个事件的js函数

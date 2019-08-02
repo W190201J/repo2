@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/stores/f1/en/" />
+
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//image1.fanobject.com" />
+    <link rel="dns-prefetch" href="//productview1.fanobject.com" />
+    <link rel="dns-prefetch" href="//static1.fanobject.com" />
+    <link rel="dns-prefetch" href="//image2.fanobject.com" />
+    <link rel="dns-prefetch" href="//productview2.fanobject.com" />
+    <link rel="dns-prefetch" href="//static2.fanobject.com" />
+
+    <!-- Begin Monetate ExpressTag Sync v8.1. Place at start of document head. DO NOT ALTER. -->
+    <script type="text/javascript">var monetateT = new Date().getTime();</script>
+    <script type="text/javascript" src="//se.monetate.net/js/2/a-3048d11e/p/f1store.formula1.com/entry.js"></script>
+    <!-- End Monetate tag. -->
+
+    <meta charset="utf-8" />
+    <meta content="width=1024" name="viewport">
+    <title>俱乐部商城 | 篮球俱乐部官方商城</title>
+    <meta name="description" content="欢迎来到篮球俱乐部商城">
+    <meta name="keywords" content="篮球">
+
+    <link href="//static1.fanobject.com/css/bootstrap.min.css?v1" rel="stylesheet" />
+    <link rel="stylesheet" href="//static1.fanobject.com/css/gb2/f1-desktop/f1.desktop.min.css?3593060601" />
+
+</head>
+<body data-ng-app="kitbag" data-ng-controller="applicationCtrl" class="ng-cloak" id="desktopBody">
+
+<div data-ng-controller="MonetateController">
+    <scope-init property="monetateMethods" value="[{&quot;method&quot;:&quot;setPageType&quot;,&quot;data&quot;:&quot;home&quot;},{&quot;method&quot;:&quot;trackData&quot;,&quot;data&quot;:null}]"></scope-init>
+</div>
+
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-98KT" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+</noscript>
+<script>
+    var dataLayer = [ {"portal":"CHMHGTFG","network":"KITBAG","language":"1","location":"CN","testTransaction":false,"userId":"0","userEmail":"","productId":0,"md5Email":"","transactionTotal":0.0,"transactionDiscountTotal":0.0,"TransactionTotalGBP":0.0,"transactionSubTotalNetGBP":0.0,"transactionShipping":0.0,"transactionTax":0.0,"userExisting":false,"networkUid":""} ];
+
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-98KT');
+</script>
+
+<div data-ng-controller="googleTagManagerController"></div>
+
+<header id="controlPanel" data-ng-controller="controlPanelCtrl" class="ng-cloak">
+    <div id="controlPanelMenu">
+        <ul id="controlPanelMenuItems">
+            <li class="controlPanelMenuItem controlPanelBasicLink">
+                <a href="/stores/f1/en//Account/Login" class="controlPanelText">登录/注册</a>
+            </li>
+            <li id="checkoutLink" class="controlPanelMenuItem" ng-if="!basketIsEmpty()">
+                <a href="/stores/f1/en/checkout" class="controlPanelText">结算</a>
+            </li>
+            <li id="basketSummary" class="controlPanelMenuItem" ng-class="{ 'empty': basketIsEmpty() }">
+                <span ng-if="basketIsEmpty()" ng-bind="'Basket Is Empty'" class="controlPanelText"></span>
+                <a class="controlPanelText" ng-if="basketContainsOneItem()" ng-bind="'itemInBasketText' | translation:{0: basketSummary.Total}" href="/stores/f1/en/basket"></a>
+                <a class="controlPanelText" ng-if="basketContainsManyItems()" ng-bind="'itemsInBasketText' | translation:{0: basketSummary.ItemCount, 1:basketSummary.Total}" href="/stores/f1/en/basket"></a>
+            </li>
+        </ul>
+    </div>
+    <div><img src="http://localhost/img/logo.png" alt="logo" height="199" width="100%"></div>
+
+    <config-init key="translations.itemInBasketText" value="1 item / {0}"></config-init>
+    <config-init key="translations.itemsInBasketText" value="{0} items / {1}"></config-init>
+    <scope-init property="updateBasketSummary" value="/stores/f1/en/basket/getBasketSummary"></scope-init>
+
+    <scope-init property="accountMenuItems" value="[{&quot;Name&quot;:&quot;My Account&quot;,&quot;Image&quot;:&quot;&quot;,&quot;HasChildren&quot;:false,&quot;Children&quot;:[],&quot;Url&quot;:&quot;/stores/f1/en/profile/myprofile&quot;,&quot;ShowAllCategoryItem&quot;:false,&quot;Id&quot;:&quot;&quot;,&quot;ViewAll&quot;:&quot;&quot;,&quot;Selected&quot;:false,&quot;IsThirdPartyUrl&quot;:false},{&quot;Name&quot;:&quot;Logout&quot;,&quot;Image&quot;:&quot;&quot;,&quot;HasChildren&quot;:false,&quot;Children&quot;:[],&quot;Url&quot;:&quot;/stores/f1/en/account/logout&quot;,&quot;ShowAllCategoryItem&quot;:false,&quot;Id&quot;:&quot;&quot;,&quot;ViewAll&quot;:&quot;&quot;,&quot;Selected&quot;:false,&quot;IsThirdPartyUrl&quot;:false}]"></scope-init>
+    <scope-init property="currencyMenuItems" value="[{&quot;Name&quot;:&quot;GBP &#163;&quot;,&quot;Image&quot;:&quot;&quot;,&quot;HasChildren&quot;:false,&quot;Children&quot;:[],&quot;Url&quot;:&quot;/stores/f1/en/DesktopControlPanel/SaveCurrency/1&quot;,&quot;ShowAllCategoryItem&quot;:false,&quot;Id&quot;:&quot;&quot;,&quot;ViewAll&quot;:&quot;&quot;,&quot;Selected&quot;:false,&quot;IsThirdPartyUrl&quot;:false},{&quot;Name&quot;:&quot;USD $&quot;,&quot;Image&quot;:&quot;&quot;,&quot;HasChildren&quot;:false,&quot;Children&quot;:[],&quot;Url&quot;:&quot;/stores/f1/en/DesktopControlPanel/SaveCurrency/3&quot;,&quot;ShowAllCategoryItem&quot;:false,&quot;Id&quot;:&quot;&quot;,&quot;ViewAll&quot;:&quot;&quot;,&quot;Selected&quot;:false,&quot;IsThirdPartyUrl&quot;:false},{&quot;Name&quot;:&quot;EUR €&quot;,&quot;Image&quot;:&quot;&quot;,&quot;HasChildren&quot;:false,&quot;Children&quot;:[],&quot;Url&quot;:&quot;/stores/f1/en/DesktopControlPanel/SaveCurrency/11&quot;,&quot;ShowAllCategoryItem&quot;:false,&quot;Id&quot;:&quot;&quot;,&quot;ViewAll&quot;:&quot;&quot;,&quot;Selected&quot;:false,&quot;IsThirdPartyUrl&quot;:false},{&quot;Name&quot;:&quot;AUD $&quot;,&quot;Image&quot;:&quot;&quot;,&quot;HasChildren&quot;:false,&quot;Children&quot;:[],&quot;Url&quot;:&quot;/stores/f1/en/DesktopControlPanel/SaveCurrency/24&quot;,&quot;ShowAllCategoryItem&quot;:false,&quot;Id&quot;:&quot;&quot;,&quot;ViewAll&quot;:&quot;&quot;,&quot;Selected&quot;:false,&quot;IsThirdPartyUrl&quot;:false},{&quot;Name&quot;:&quot;KRW ₩&quot;,&quot;Image&quot;:&quot;&quot;,&quot;HasChildren&quot;:false,&quot;Children&quot;:[],&quot;Url&quot;:&quot;/stores/f1/en/DesktopControlPanel/SaveCurrency/25&quot;,&quot;ShowAllCategoryItem&quot;:false,&quot;Id&quot;:&quot;&quot;,&quot;ViewAll&quot;:&quot;&quot;,&quot;Selected&quot;:false,&quot;IsThirdPartyUrl&quot;:false},{&quot;Name&quot;:&quot;JPY &#165;&quot;,&quot;Image&quot;:&quot;&quot;,&quot;HasChildren&quot;:false,&quot;Children&quot;:[],&quot;Url&quot;:&quot;/stores/f1/en/DesktopControlPanel/SaveCurrency/22&quot;,&quot;ShowAllCategoryItem&quot;:false,&quot;Id&quot;:&quot;&quot;,&quot;ViewAll&quot;:&quot;&quot;,&quot;Selected&quot;:false,&quot;IsThirdPartyUrl&quot;:false}]"></scope-init>
+    <scope-init property="languageMenuItems" value="[{&quot;Image&quot;:&quot;flag flag-zh&quot;,&quot;Url&quot;:&quot;https://f1store.formula1.com/stores/f1/zh&quot;},{&quot;Image&quot;:&quot;flag flag-fr&quot;,&quot;Url&quot;:&quot;https://f1store.formula1.com/stores/f1/fr&quot;},{&quot;Image&quot;:&quot;flag flag-de&quot;,&quot;Url&quot;:&quot;https://f1store.formula1.com/stores/f1/de&quot;},{&quot;Image&quot;:&quot;flag flag-it&quot;,&quot;Url&quot;:&quot;https://f1store.formula1.com/stores/f1/it&quot;},{&quot;Image&quot;:&quot;flag flag-es&quot;,&quot;Url&quot;:&quot;https://f1store.formula1.com/stores/f1/es&quot;}]"></scope-init>
+
+</header>
+<config-init key="browser">
+    <value ng-non-bindable>{&quot;IsMobileDevice&quot;:false}</value>
+</config-init>
+
+<!--导航栏-->
+<nav id="menu" navigation-menu>
+
+    <ul class="topLevelMenu">
+
+        <li class="menuHeader">
+            <a href="" class="navItem Below Normal">
+                <span>分类浏览</span>
+            </a>
+        </li>
+
+        <li class="menuHeader">
+            <a class="navItem Normal" href="/stores/f1/en/c/accessories-&amp;-gifts">品牌浏览</a>
+        </li>
+
+        <li class="menuHeader">
+            <a class="navItem Normal" href="/stores/f1/en/c/shop-by-driver">上新</a>
+        </li>
+        <li class="menuHeader">
+            <a href="/stores/f1/en/c/collections" class="navItem Below Normal">
+                <img src="//static2.fanobject.com/stores/f1/artwork/english/banners/navigation/nav-img-pirelli.jpg" />
+                <span>热品</span>
+            </a>
+        </li>
+    </ul>
+
+</nav>
+<section id="ContentSection" class="homePageContent">
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <carousel id="carousel" interval="5000">
+        <slide class="carousel-image-container">
+
+            <img class="carousel-image" src="//static2.fanobject.com/stores/f1/artwork/english/banners/23072019/DesktopCarousel_1920x400px.jpg" alt="Carousel Image" />
+
+            <a href="/stores/f1/en/c/shop-by-team/renault">
+                <div class="textArea middleCentre ">
+                    <div>
+                    </div>
+                </div>
+            </a>
+
+            <div class="carousel-caption single-cta middleCentre">
+                <a href="/stores/f1/en/c/shop-by-team/renault">SHOP NOW</a>
+            </div>
+
+        </slide>
+        <slide class="carousel-image-container">
+
+            <img class="carousel-image" src="//static2.fanobject.com/stores/f1/artwork/english/banners/LewisGBcap/DesktopCarousel_1920x400px.jpg" alt="Carousel Image" />
+
+            <a href="/stores/f1/en/c/caps/lh-special-edition-caps">
+                <div class="textArea middleCentre ">
+                    <div>
+                    </div>
+                </div>
+            </a>
+
+            <div class="carousel-caption single-cta middleCentre">
+                <a href="/stores/f1/en/c/caps/lh-special-edition-caps">SHOP NOW</a>
+            </div>
+
+        </slide>
+        <slide class="carousel-image-container">
+
+            <img class="carousel-image" src="//static1.fanobject.com/stores/f1/artwork/english/banners/F12019Game/Desktop_Carousel_1920x400px.jpg" alt="Carousel Image" />
+
+            <a href="/stores/f1/en/c/accessories-&amp;-gifts/souvenirs/toys-and-games">
+                <div class="textArea middleCentre ">
+                    <div>
+                    </div>
+                </div>
+            </a>
+
+            <div class="carousel-caption single-cta middleCentre">
+                <a href="/stores/f1/en/c/accessories-&amp;-gifts/souvenirs/toys-and-games">SHOP NOW</a>
+            </div>
+
+        </slide>
+    </carousel>
+
+
+
+
+    <brand-selector-carousel campaigns="[{&quot;Campaign&quot;:{&quot;AltText&quot;:&quot;&quot;,&quot;Link&quot;:&quot;&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;&quot;,&quot;ActiveClass&quot;:&quot;&quot;},&quot;Brands&quot;:[{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/mercedes-amg-petronas&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/180x180_team_silder_mercedes_.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/scuderia-ferrari&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/180x180_team_silder_ferrari.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/red-bull-racing&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/180x180_team_silder_red_bull_.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/renault&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/Desktop_Slider._180x180_Renault.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/mclaren&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/180x180_team_silder_mclaren_.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/alfa-romeo-racing&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/180x180_Alfa_Romeo_desktopteamslider.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/rokit-williams-racing&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/Desktop_Slider._180x180_Rokit_Williams.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/scuderia-toro-rosso&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/180x180_team_silder_toro_rosso_.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/haas-f1-team&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/180x180_haas_desktopteamslider.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/racing-point&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Team&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/Desktop_Slider._180x180_Sport_Racing.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;}],&quot;IsLeftMost&quot;:true},{&quot;Campaign&quot;:{&quot;AltText&quot;:&quot;&quot;,&quot;Link&quot;:&quot;&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;&quot;,&quot;ActiveClass&quot;:&quot;&quot;},&quot;Brands&quot;:[{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/lewis-hamilton&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Hamiliton.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/valtteri-bottas&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Bottas.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/sebastian-vettel&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Vettel.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/charles-leclerc&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Leclerc.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/max-verstappen&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Verstappen.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/pierre-gasly&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Gasly.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/mclaren&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Sainz.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/mclaren&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Norris.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/nico-hulkenberg&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Hulkenburg.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/daniel-ricciardo&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Ricciardo.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/lance-stroll&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Stroll.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/sergio-perez&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Perez.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/rokit-williams-racing&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Kubica.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/rokit-williams-racing&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Russell.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/alfa-romeo-racing&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Giovinazzi.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/kimi-raikkonen&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Raikkonen.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/scuderia-toro-rosso&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Albon.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-team/scuderia-toro-rosso&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Kvyat.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/romain-grosjean&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Grosjean.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/c/shop-by-driver/championship/kevin-magnussen&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;Shop By Driver&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Drivers/180x180px_Magnussen.png&quot;,&quot;ActiveClass&quot;:&quot;&quot;}],&quot;IsLeftMost&quot;:false},{&quot;Campaign&quot;:{&quot;AltText&quot;:&quot;&quot;,&quot;Link&quot;:&quot;&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;&quot;,&quot;ActiveClass&quot;:&quot;&quot;},&quot;Brands&quot;:[{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/mercedes-amg-petronas-2019-team-cap---black/246966&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/caps/f1-246963.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/aston-martin-red-bull-racing-2019-team-cap/247004&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/caps/f1-247004.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/scuderia-ferrari-2019-team-cap/246913&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/caps/f1-246913.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/mercedes-amg-petronas-2019-valtteri-bottas-cap---blue/246965&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/caps/f1-246965.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/aston-martin-red-bull-racing-2019-max-verstappen-cap/246988&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/caps/f1-246988.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/mercedes-amg-petronas-2019-team-cap---white/246967&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/caps/f1-246967.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/scuderia-toro-rosso-f1-2019-team-cap/244757&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/caps/f1-244758.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/williams-racing-2019-team-cap/248779&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/caps/f1-248779.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/mercedes-amg-petronas-2019-lewis-hamilton-cap---black/246961&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/caps/f1-246959.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/scuderia-ferrari-2019-sebastian-vettel-cap---kids/246927&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/caps/f1-246927.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/aston-martin-red-bull-racing-2019-pierre-gasly-cap/247005&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/caps/f1-247005.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/scuderia-toro-rosso-f1-2019-daniil-kvyat-driver-cap/244765&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/caps/f1-244765.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;},{&quot;AltText&quot;:null,&quot;Link&quot;:&quot;/stores/f1/en/product/williams-racing-2019-george-russell-team-cap/248785&quot;,&quot;Slogan&quot;:&quot;slide&quot;,&quot;Title&quot;:&quot;2019 Caps&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/caps/f1-248785.jpg&quot;,&quot;ActiveClass&quot;:&quot;&quot;}],&quot;IsLeftMost&quot;:false}]"></brand-selector-carousel>
+
+    <variable-promotional-grid grid="[[{&quot;Width&quot;:12,&quot;AltText&quot;:&quot;&quot;,&quot;Link&quot;:&quot;&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Generic/1000x116_Shop_By_Category.jpg&quot;,&quot;TextLine1&quot;:null,&quot;TextLine2&quot;:null,&quot;DarkText&quot;:false}],[{&quot;Width&quot;:4,&quot;AltText&quot;:&quot;T-SHIRTS&quot;,&quot;Link&quot;:&quot;/stores/f1/en/c/t-shirts?Intcmp=2019_tees_desktop&quot;,&quot;Url&quot;:&quot;//static2.fanobject.com/stores/f1/artwork/english/banners/DesktopSidebanner2499x374px_t-shirts.jpg&quot;,&quot;TextLine1&quot;:&quot;T-SHIRTS&quot;,&quot;TextLine2&quot;:null,&quot;DarkText&quot;:false},{&quot;Width&quot;:4,&quot;AltText&quot;:&quot;CAPS&quot;,&quot;Link&quot;:&quot;/stores/f1/en/c/caps?Intcmp=2019_caps_desktop&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/Desktopsidebanner2499x374px_caps.jpg&quot;,&quot;TextLine1&quot;:&quot;CAPS&quot;,&quot;TextLine2&quot;:null,&quot;DarkText&quot;:false},{&quot;Width&quot;:4,&quot;AltText&quot;:&quot;SWEATS &amp; JACKETS&quot;,&quot;Link&quot;:&quot;/stores/f1/en/c/sweats-&amp;-jackets?Intcmp=2019_jackets_desktop&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/DesktopSidebanner2499x374px_Sweats&amp;Jackets.jpg&quot;,&quot;TextLine1&quot;:&quot;SWEATS &amp; JACKETS&quot;,&quot;TextLine2&quot;:null,&quot;DarkText&quot;:false}],[{&quot;Width&quot;:12,&quot;AltText&quot;:&quot;&quot;,&quot;Link&quot;:&quot;&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Generic/1000x116_en_collections.jpg&quot;,&quot;TextLine1&quot;:null,&quot;TextLine2&quot;:null,&quot;DarkText&quot;:false}],[{&quot;Width&quot;:6,&quot;AltText&quot;:&quot;SHOP PUMA&quot;,&quot;Link&quot;:&quot;/stores/f1/en/c/collections/ss19-puma-lifestyle?Intcmp=2019puma_generic_desktop&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Generic/ss19puma_merc_d_Sidebanner_2_499x374_v2.jpg&quot;,&quot;TextLine1&quot;:&quot;SHOP PUMA&quot;,&quot;TextLine2&quot;:null,&quot;DarkText&quot;:false},{&quot;Width&quot;:6,&quot;AltText&quot;:&quot;F1 COLLECTIONS&quot;,&quot;Link&quot;:&quot;/stores/f1/en/c/collections/formula-1&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/DesktopSidebanner2499x374px_Collections.jpg&quot;,&quot;TextLine1&quot;:&quot;SHOP NOW&quot;,&quot;TextLine2&quot;:null,&quot;DarkText&quot;:false}],[{&quot;Width&quot;:6,&quot;AltText&quot;:&quot;ACCESSORIES &amp; GIFTS&quot;,&quot;Link&quot;:&quot;/stores/f1/en/c/accessories-&amp;-gifts?Intcmp=access_sidebanner_desktop&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/DesktopSidebanner2499x374px_Accessories.jpg&quot;,&quot;TextLine1&quot;:&quot;SHOP NOW&quot;,&quot;TextLine2&quot;:null,&quot;DarkText&quot;:false},{&quot;Width&quot;:6,&quot;AltText&quot;:&quot;SHOP NOW&quot;,&quot;Link&quot;:&quot;/stores/f1/en/c/clearance&quot;,&quot;Url&quot;:&quot;//static1.fanobject.com/stores/f1/artwork/english/banners/2019Generic/2018clearance_Desktop_Sidebanner2_499x374px.jpg&quot;,&quot;TextLine1&quot;:&quot;SHOP NOW&quot;,&quot;TextLine2&quot;:null,&quot;DarkText&quot;:false}]]"></variable-promotional-grid>
+
+
+
+    <fan-partial-view-loader url="GetRecommendedProducts"></fan-partial-view-loader>
+
+    <config-init key="translations.membersPriceText" value="[Members {0}]"></config-init>
+
+
+
+
+
+
+
+
+
+
+
+    <section id="subscriptionSignup">
+        <form method="post" id="subscribe" name="subscription" novalidate ng-controller="subscriptionsCtrl">
+            <h2>SIGN UP AND SAVE 10%</h2>
+            <span class="subscribeDescription"><p>By providing your email address you agree to receive emails from us about the latest product news and offers. View our <a href="https://static1.fanobject.com/stores/f1/privacypolicy/F1_Privacy_Policy (ENGLISH).pdf" target="_blank">Privacy Policy</a> here.</p></span>
+
+            <div class="subscriptionInput" ng-hide="subscriptionResult">
+                <div class="emailWrapper">
+                    <input type="email" name="emailInput" ng-model="email" placeholder="Email Address" class="emailAddressTextBox" required />
+                    <div ng-messages="subscription.emailInput.$error" class="validationMessages">
+                        <span ng-message="required">Required</span>
+                        <span ng-message="email">Email Invalid</span>
+                        <span ng-show="showSubscriptionFailureMessage()">You have already subscribed</span>
+                    </div>
+                </div>
+
+                <div class="teamDropdownWrapper">
+                    <filtered-select-box dropdown-name="'favouriteTeam'" options="teams" placeholder="'Please Select'" no-matches-found="'[No Matches Found]'"></filtered-select-box>
+                    <div ng-if="showRequiredTeamMessage()" ng-init="setSelectBoxValidationResult()" class="validationMessages ng-active">
+                        <span>Required</span>
+                    </div>
+                </div>
+
+                <button id="subscribeButton" type="submit" ng-click="subscribeEmail(email)">
+                    Submit
+                </button>
+            </div>
+
+            <div class="subscribeSuccessMessage" ng-show="submitted && subscriptionResult">
+                <span>Thanks for subscribing!</span>
+            </div>
+
+            <config-init key="urls.AddSubscription" value="/stores/f1/en/account/AddSubscriber"></config-init>
+
+            <scope-init property="initialise">
+                <value ng-non-bindable>{&quot;FavouriteTeamOptions&quot;:{&quot;MultipleChoice&quot;:false,&quot;ShowTeams&quot;:true,&quot;Teams&quot;:[{&quot;Id&quot;:84,&quot;Name&quot;:&quot;Scuderia Ferrari&quot;},{&quot;Id&quot;:85,&quot;Name&quot;:&quot;Mercedes AMG Petronas&quot;},{&quot;Id&quot;:86,&quot;Name&quot;:&quot;McLaren&quot;},{&quot;Id&quot;:87,&quot;Name&quot;:&quot;ROKiT Williams Racing&quot;},{&quot;Id&quot;:88,&quot;Name&quot;:&quot;Aston Martin Red Bull Racing&quot;},{&quot;Id&quot;:89,&quot;Name&quot;:&quot;Racing Point&quot;},{&quot;Id&quot;:91,&quot;Name&quot;:&quot;Scuderia Toro Rosso&quot;},{&quot;Id&quot;:92,&quot;Name&quot;:&quot;Alfa Romeo Racing&quot;},{&quot;Id&quot;:94,&quot;Name&quot;:&quot;Haas&quot;},{&quot;Id&quot;:416,&quot;Name&quot;:&quot;Renault&quot;}],&quot;ViewName&quot;:&quot;TeamSelector/_SingleTeamSelector.Desktop&quot;},&quot;PleaseSelectText&quot;:&quot;Please Select&quot;,&quot;FavouriteTeamText&quot;:&quot;[Favourite Team]&quot;,&quot;NoMatchesFoundText&quot;:&quot;[No Matches Found]&quot;,&quot;Translations&quot;:{},&quot;AddSubscriberUrl&quot;:&quot;/stores/f1/en/account/AddSubscriber&quot;,&quot;SubscriptionSignUpText&quot;:&quot;SIGN UP AND SAVE 10%&quot;,&quot;SubscriptionDescriptionText&quot;:&quot;&lt;p&gt;By providing your email address you agree to receive emails from us about the latest product news and offers. View our &lt;a href=\&quot;https://static1.fanobject.com/stores/f1/privacypolicy/F1_Privacy_Policy (ENGLISH).pdf\&quot; target=\&quot;_blank\&quot;&gt;Privacy Policy&lt;/a&gt; here.&lt;/p&gt;&quot;,&quot;SubscriptionEmailText&quot;:&quot;Email Address&quot;,&quot;SubscriptionSubmitButtonText&quot;:&quot;Submit&quot;,&quot;SubscriptionSuccessMessage&quot;:&quot;Thanks for subscribing!&quot;,&quot;InvalidEmailText&quot;:&quot;Email Invalid&quot;,&quot;RequiredText&quot;:&quot;Required&quot;,&quot;SubscriptionFailureMessage&quot;:&quot;You have already subscribed&quot;}</value>
+            </scope-init>
+            <scope-init property="teams" value="[{&quot;Id&quot;:84,&quot;Name&quot;:&quot;Scuderia Ferrari&quot;},{&quot;Id&quot;:85,&quot;Name&quot;:&quot;Mercedes AMG Petronas&quot;},{&quot;Id&quot;:86,&quot;Name&quot;:&quot;McLaren&quot;},{&quot;Id&quot;:87,&quot;Name&quot;:&quot;ROKiT Williams Racing&quot;},{&quot;Id&quot;:88,&quot;Name&quot;:&quot;Aston Martin Red Bull Racing&quot;},{&quot;Id&quot;:89,&quot;Name&quot;:&quot;Racing Point&quot;},{&quot;Id&quot;:91,&quot;Name&quot;:&quot;Scuderia Toro Rosso&quot;},{&quot;Id&quot;:92,&quot;Name&quot;:&quot;Alfa Romeo Racing&quot;},{&quot;Id&quot;:94,&quot;Name&quot;:&quot;Haas&quot;},{&quot;Id&quot;:416,&quot;Name&quot;:&quot;Renault&quot;}]"></scope-init>
+        </form>
+
+    </section>
+
+</section>
+
+
+<div id="siteFooter" class="copy">
+
+    <section id="siteInformation">
+        <div id="footerLogo"></div>
+
+        <div id="footerGglContent">Welcome to the official Formula One online store, the one-stop shop for the high-octane sport of F1, specialising in distributing the latest and greatest F1 and Grand Prix merchandise, while stocking an unrivalled range of authentic and licenced teamwear, caps, fan apparel and accessories. Approved by the official FIA Formula One World Championship to supply race fans with the ultimate in F1 product choice, the F1 online store has just about everything an F1 enthusiast might need to support their favourite teams and drivers, across the thrilling 2019 Formula 1 Grand Prix season. The F1 store itself is a unique apparel and merchandise hub, bringing together extensive selections from the sport’s most revered and established constructors, with certified team ranges celebrating Mercedes AMG Petronas, Scuderia Ferrari, Aston Martin Red Bull Racing, SportPesa Racing Point F1 Team, ROKIT Williams Racing, McLaren, Scuderia Toro Rosso, Rich Energy Haas F1 Team, Renault F1 Team and Alfa Romeo Racing. Amidst a wide variety of F1 clothing, from teamwear replicating the gear worn by the drivers themselves to t-shirts, jackets, hoodies, caps and other leisurewear products, the F1 online store is also home to exclusive F1 accessories, original F1 gifts, authentic F1 car parts and dynamic F1 art. Under new ownership, the 2019 F1 calendar is poised to be one of the most compelling in years and the F1 store has a wealth of fresh merchandise for fans to enjoy around every single race weekend. From the Rolex Australian Grand Prix, Heineken Chinese Grand Prix, Gulf Air Bahrain Grand Prix, Russian Grand Prix, Gran Premio de España, Grand Prix de Monaco, Grand Prix du Canada , Azerbaijan Grand Prix and Grosser Preis von Österreich to the British Grand Prix, Magyar Nagydíj,  Belgian Grand Prix, Gran Premio Heineken d'Italia, Singapore Airlines Singapore Grand Prix, Petronas Malaysia Grand Prix, Japanese Grand Prix, United States Grand Prix, Gran Premio de México, Grande Prêmio do Brasil and Etihad Airways Abu Dhabi Grand Prix, the eyes of the world will be on F1 this season - and the official online store is ready and equipped to help F1 fans be part of the excitement. Support the superstars of the Formula One circuit from the grid to glory, with a host of products for fans of world class drivers like Lewis Hamilton, Sebastian Vettel, Kimi Raikkonen, Daniel Ricciardo, Valtteri Bottas, Max Verstappen and Romain Grosjean. Meanwhile, long-time F1 followers can honour their all-time heroes with our multiple legacy lines, where iconic figures across the sport’s rich history, from Ayrton Senna to Alain Prost to Michael Schumacher, are rightfully and respectfully represented.    Finally, the perennial and premium Pirelli tyre brand can be found across the F1 online store, with distinctive Pirelli sponsorship merchandise, including the legendary black and gold Pirelli podium winner’s cap, sitting among a host of Pirelli clothing and Pirelli accessories available to order direct. With buying and delivery options making purchases easier than ever, the official F1 online store is additionally pleased to offer fast worldwide delivery on all products, with customers able to get their hands on F1 merchandise quickly and efficiently using PayPal or major credit cards at checkout. From the paddock to the podium, the official F1 online store and its championship-calibre collections takes your Formula One fandom way beyond the chequered flag.</div>
+    </section>
+    <section id="footerMenu">
+
+        <nav class="footerNav">
+            <h1 class="footerHeader">My Account</h1>
+            <ul>
+
+                <li><a href="/stores/f1/en/login">
+                    Login/Register
+                </a></li>
+                <li><a href="/stores/f1/en/profile/myprofile">
+                    My Account
+                </a></li>
+                <li><a href="/stores/f1/en/profile/orderhistory">
+                    Track My Order
+                </a></li>
+                <li><a href="/stores/f1/en/help?helpSection=placingYourOrder">
+                    How To Order
+                </a></li>
+
+            </ul>
+        </nav>
+        <nav class="footerNav">
+            <h1 class="footerHeader">Customer Services</h1>
+            <ul>
+
+                <li><a href="/stores/f1/en/help?helpSection=contactUs">
+                    Contact Us
+                </a></li>
+                <li><a href="/stores/f1/en/help?helpSection=faq">
+                    FAQs
+                </a></li>
+                <li><a href="/stores/f1/en/help?helpSection=deliveryOptions">
+                    Delivery Options
+                </a></li>
+                <li><a href="/stores/f1/en/help?helpSection=ordersAndReturns">
+                    Returns &amp; Refunds
+                </a></li>
+                <li><a href="/stores/f1/en/help?helpSection=aboutUs">
+                    About Us
+                </a></li>
+
+            </ul>
+        </nav>
+        <nav class="footerNav">
+            <h1 class="footerHeader">Payment Methods</h1>
+            <ul>
+
+                <li><a href="/stores/f1/en/help?helpSection=questionsAboutPaying">
+                    Accepted Payment Cards
+                    <div class="acceptedPayments"></div>
+                </a></li>
+
+            </ul>
+        </nav>
+        <nav class="footerNav">
+            <h1 class="footerHeader">Online Security</h1>
+            <ul>
+
+                <li><a href="/stores/f1/en/help?helpSection=security">
+                    Secure Shopping
+                </a></li>
+                <li><a href="/stores/f1/en/help?helpSection=privacy">
+                    Privacy
+                </a></li>
+                <li><a href="/stores/f1/en/help?helpSection=cookies">
+                    Cookie
+                </a></li>
+                <li><a href="/stores/f1/en/help?helpSection=termsAndConditions">
+                    Terms and Conditions
+                </a></li>
+
+            </ul>
+        </nav>
+
+
+        <nav class="footerNav">
+            <h1 class="footerHeader">Verified Service</h1>
+            <ul>
+                <li><a href="https://www.globalsign.com" target="_blank" class="globalsign"></a></li>
+
+            </ul>
+        </nav>
+
+
+        <nav class="footerNav">
+            <h1 class="footerHeader">Social</h1>
+            <ul>
+                <li><a href="https://www.twitter.com/f1" title="Twitter" id="twitterLink" target="_blank">Twitter</a></li>
+                <li><a href="http://www.instagram.com/f1" title="Instagram" id="instagramLink" target="_blank">Instagram</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section id="legal">
+        <small>&#169; Copyright 2019 Fanatics (International) Ltd, Company No. 5933624 whose registered office is at Greengate, Middleton, Manchester, M24 1FD</small>
+    </section>
+</div>
+
+
+<div class="overlay" ng-show="spinnerIsActive()">
+    <div id="Spinner" ng-spinner="{radius:50, width:12, length: 24}"></div>
+</div>
+
+<script src="//static1.fanobject.com/js/gb2/f1-desktop/shared-vendor.min.js?1425556056"></script>
+
+<script src="//static1.fanobject.com/js/gb2/f1-desktop/shared.desktop.min.js?896625749"></script>
+
+
+
+
+<script src="//static1.fanobject.com/js/gb2/f1-desktop/home.desktop.min.js?2613639453"></script>
+
+
+
+<!--Site Catalyst Tracking Start-->
+<!-- SiteCatalyst code version: H.20.3.
+Copyright 1997-2009 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script type="text/javascript">
+    var scIP = '117.136.24.170';
+    var siteDetails = { "id": "105" };
+    var userPreferences = { "languageId": 1, "currencyCode" : "CNY" };
+</script>
+<script language="javascript" type="text/javascript">
+    var scriptUrl = '//static2.fanobject.com/js/gb2/f1-desktop/s_code.min.js?4166716007';
+    $.getScript(scriptUrl, function () {
+        try {
+            s.prop27 = "Desktop Site";
+            s.eVar27 = "Desktop Site";
+            s.pageName = "Home";
+
+
+            /************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+            var s_code = s.t();
+            if (s_code) document.write(s_code);
+        }
+        catch(err){}
+    });
+</script>
+
+<!--Site Catalyst Tracking End-->
+
+
+
+
+<div data-ng-controller="CookieConsentCtrl">
+    <div class="cookie-consent" ng-if="!hasConsented()">
+        <div class="consent-text">本网站使用cookies,继续浏览表示您同意我们使用cookies,阅读<a href="//static1.fanobject.com/stores/common/cookiepolicy/Cookie_Policy_English.pdf" target="_blank">Cookie协议</a>.</div>
+        <span class="consent-close" ng-click="consentAction()">Ok</span>
+    </div>
+</div>
+
+
+
+
+<div id="promotionalBannersPlaceholder"></div>
+
+<div ng-show="banners.length > 0" class="promotionalBannerOuterContainer" bottom-scroll-promotional-banners-desktop ng-controller="promotionalBannerCtrl as vm" ng-init="init([])">
+    <div id="promotionalBanner-{{banner.Id}}" class="promotionalBannerBorderContainer" ng-repeat="banner in banners" ng-show="banner.Countdown.Total > 0 && banner.Content != ''" ng-style="banner.style">
+        <div class="promotionalBannerInnerContainer">
+            <div class="bannerContents">
+                <div class="promotionalBanner">
+                    <div class="promotionalBannerCountdown" ng-show="banner.ShowCountdown">
+                        <div class="promotionalBannerCountdownComponent" ng-show="banner.Countdown.Days > 0">
+                            <div class="countdownText">
+                                {{banner.Countdown.Days}}
+                            </div>
+                            <div class="countdownAbbr">
+                                DD
+                            </div>
+                        </div>
+                        <div class="promotionalBannerCountdownComponent" ng-show="banner.Countdown.Days > 0">
+                            <div class="countdownText">
+                                :
+                            </div>
+                            <div class="countdownAbbr">
+                                &nbsp;
+                            </div>
+                        </div>
+                        <div class="promotionalBannerCountdownComponent" ng-show="banner.Countdown.Days > 0 || banner.Countdown.Hours > 0">
+                            <div class="countdownText">
+                                {{banner.Countdown.Hours}}
+                            </div>
+                            <div class="countdownAbbr">
+                                HH
+                            </div>
+                        </div>
+                        <div class="promotionalBannerCountdownComponent" ng-show="banner.Countdown.Days > 0 || banner.Countdown.Hours > 0">
+                            <div class="countdownText">
+                                :
+                            </div>
+                            <div class="countdownAbbr">
+                                &nbsp;
+                            </div>
+                        </div>
+                        <div class="promotionalBannerCountdownComponent">
+                            <div class="countdownText">
+                                {{banner.Countdown.Minutes}}
+                            </div>
+                            <div class="countdownAbbr">
+                                MM
+                            </div>
+                        </div>
+                        <div class="promotionalBannerCountdownComponent">
+                            <div class="countdownText">
+                                :
+                            </div>
+                            <div class="countdownAbbr">
+                                &nbsp;
+                            </div>
+                        </div>
+                        <div class="promotionalBannerCountdownComponent">
+                            <div class="countdownText">
+                                {{banner.Countdown.Seconds}}
+                            </div>
+                            <div class="countdownAbbr">
+                                SS
+                            </div>
+                        </div>
+                        <div class="promotionalBannerCountdownComponent verticalLine" ng-style="banner.separatorStyle"></div>
+                    </div>
+                    <div class="promotionalBannerTextContainer">
+                        <div class="promotionBannerTextContainerContent">{{banner.Content}}</div>
+                        <div class="promotionBannerTextContainerTAndC" ng-if="banner.ShowTerms"><a ng-style="banner.style" href="/stores/f1/en/help?helpSection=termsAndConditions" target="_blank">Terms and Conditions</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="closeBanner">
+            <span ng-click="vm.closeBanner(banner.Id)">&times;</span>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>
